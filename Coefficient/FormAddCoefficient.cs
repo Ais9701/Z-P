@@ -35,46 +35,6 @@ namespace Zarabotnaya_plata
 
         }
 
-        private void buttAdd_Click(object sender, EventArgs e)
-        {
-            SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-DPL61M9\SQLEXPRESS;Initial Catalog=Zarabotnaya_plata;Integrated Security=True");
-            connection.Open();
-            IFormatProvider formatt = new NumberFormatInfo {NumberDecimalSeparator = "."};
-            int id_coefficient = int.Parse(id_coefficienttextBox.Text);//эта строчка кода преобразует введенный ID клиента из строкового типа в тип int
-            int junior = int.Parse(juniortextBox.Text);
-            int middle = int.Parse(middletextBox.Text);
-            int senior = int.Parse(seniortextBox.Text);
-            // double k_a_p = Convert.ToDouble(k_a_ptextBox.Text, formatt);
-            // double k_y_o = Convert.ToDouble(k_y_otextBox.Text, formatt);
-            // double k_t_o_s = Convert.ToDouble(k_t_o_stextBox.Text, formatt);
-            double k_a_p = double.Parse(k_a_ptextBox.Text.Replace (".",","));
-            double k_y_o = double.Parse(k_y_otextBox.Text.Replace(".", ","));
-            double k_t_o_s = double.Parse(k_t_o_stextBox.Text.Replace(".", ","));
-
-            //double k_a_p = Convert.ToDouble(k_a_ptextBox.Text, formatt);
-            //double k_y_o = Convert.ToDouble(k_y_otextBox.Text, formatt);
-            //double k_t_o_s = Convert.ToDouble(k_t_o_stextBox.Text, formatt);
-            int k_v = int.Parse(k_vtextBox.Text);
-            int k_s = int.Parse(k_stextBox.Text);
-            int k_p_d_e = int.Parse(k_p_d_etextBox.Text);
-            String querySave = "INSERT INTO Coefficient (id_coefficient, junior, middle, senior, k_a_p, k_y_o, k_t_o_s, k_v, k_s, k_p_d_e) VALUES ('" + id_coefficient + "','" + junior + "','" + middle + "','" + senior + "','" + k_a_p + "','" + k_y_o + "','" + k_t_o_s + "','" + k_v + "','" + k_s + "','" + k_p_d_e + "')";
-            //updateCoefficient.Parameters.AddWithValue"(@Ставка", k_a_p);
-            SqlDataAdapter SDA = new SqlDataAdapter(querySave, connection);
-            SDA.SelectCommand.ExecuteNonQuery();//для проверки правильности внесенных данных
-            connection.Close();
-            MessageBox.Show("Коэффициент добавлен в базу данных");
-        }
-
-        private void bindingNavigatorMoveLastItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void id_coefficienttextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             // вызываем главную форму, которая открыла текущую, главная форма всегда = 0 - [0]
@@ -87,6 +47,11 @@ namespace Zarabotnaya_plata
         }
 
         private void coefficientBindingNavigator_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
+
+        private void coefficientDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

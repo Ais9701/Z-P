@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtboxlog = new System.Windows.Forms.TextBox();
@@ -35,6 +36,8 @@
             this.buttEnter = new System.Windows.Forms.Button();
             this.buttExit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,6 +72,7 @@
             this.txtboxlog.Size = new System.Drawing.Size(170, 26);
             this.txtboxlog.TabIndex = 2;
             this.txtboxlog.Text = "kukleva";
+            this.txtboxlog.TextChanged += new System.EventHandler(this.txtboxlog_TextChanged);
             // 
             // txtboxpas
             // 
@@ -115,12 +119,31 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 12.25532F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.label3.Location = new System.Drawing.Point(83, 75);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(406, 62);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "При трёх неудачных попыток, \r\nсистема заблокируется на 15 секунд";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(574, 474);
+            this.ClientSize = new System.Drawing.Size(645, 474);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttExit);
             this.Controls.Add(this.buttEnter);
@@ -147,6 +170,8 @@
         private System.Windows.Forms.Button buttEnter;
         private System.Windows.Forms.Button buttExit;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label3;
     }
 }
 

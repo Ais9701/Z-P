@@ -29,174 +29,36 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label id_coefficientLabel;
-            System.Windows.Forms.Label juniorLabel;
-            System.Windows.Forms.Label middleLabel;
-            System.Windows.Forms.Label seniorLabel;
-            System.Windows.Forms.Label k_a_pLabel;
-            System.Windows.Forms.Label k_y_oLabel;
-            System.Windows.Forms.Label k_t_o_sLabel;
-            System.Windows.Forms.Label k_vLabel;
-            System.Windows.Forms.Label k_sLabel;
-            System.Windows.Forms.Label k_p_d_eLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddCoefficient));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.zarabotnaya_plataDataSet = new Zarabotnaya_plata.Zarabotnaya_plataDataSet();
             this.coefficientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.coefficientTableAdapter = new Zarabotnaya_plata.Zarabotnaya_plataDataSetTableAdapters.CoefficientTableAdapter();
             this.tableAdapterManager = new Zarabotnaya_plata.Zarabotnaya_plataDataSetTableAdapters.TableAdapterManager();
             this.coefficientBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.coefficientBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.buttAdd = new System.Windows.Forms.Button();
-            this.id_coefficienttextBox = new System.Windows.Forms.TextBox();
-            this.juniortextBox = new System.Windows.Forms.TextBox();
-            this.middletextBox = new System.Windows.Forms.TextBox();
-            this.seniortextBox = new System.Windows.Forms.TextBox();
-            this.k_a_ptextBox = new System.Windows.Forms.TextBox();
-            this.k_y_otextBox = new System.Windows.Forms.TextBox();
-            this.k_t_o_stextBox = new System.Windows.Forms.TextBox();
-            this.k_vtextBox = new System.Windows.Forms.TextBox();
-            this.k_stextBox = new System.Windows.Forms.TextBox();
-            this.k_p_d_etextBox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
-            id_coefficientLabel = new System.Windows.Forms.Label();
-            juniorLabel = new System.Windows.Forms.Label();
-            middleLabel = new System.Windows.Forms.Label();
-            seniorLabel = new System.Windows.Forms.Label();
-            k_a_pLabel = new System.Windows.Forms.Label();
-            k_y_oLabel = new System.Windows.Forms.Label();
-            k_t_o_sLabel = new System.Windows.Forms.Label();
-            k_vLabel = new System.Windows.Forms.Label();
-            k_sLabel = new System.Windows.Forms.Label();
-            k_p_d_eLabel = new System.Windows.Forms.Label();
+            this.coefficientDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.zarabotnaya_plataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coefficientBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coefficientBindingNavigator)).BeginInit();
             this.coefficientBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coefficientDataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // id_coefficientLabel
-            // 
-            id_coefficientLabel.AutoSize = true;
-            id_coefficientLabel.Font = new System.Drawing.Font("Calibri", 12.25532F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            id_coefficientLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            id_coefficientLabel.Location = new System.Drawing.Point(12, 61);
-            id_coefficientLabel.Name = "id_coefficientLabel";
-            id_coefficientLabel.Size = new System.Drawing.Size(168, 31);
-            id_coefficientLabel.TabIndex = 1;
-            id_coefficientLabel.Text = "Коэффициент:";
-            // 
-            // juniorLabel
-            // 
-            juniorLabel.AutoSize = true;
-            juniorLabel.Font = new System.Drawing.Font("Calibri", 12.25532F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            juniorLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            juniorLabel.Location = new System.Drawing.Point(12, 113);
-            juniorLabel.Name = "juniorLabel";
-            juniorLabel.Size = new System.Drawing.Size(234, 31);
-            juniorLabel.TabIndex = 3;
-            juniorLabel.Text = "Начальный уровень:";
-            // 
-            // middleLabel
-            // 
-            middleLabel.AutoSize = true;
-            middleLabel.Font = new System.Drawing.Font("Calibri", 12.25532F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            middleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            middleLabel.Location = new System.Drawing.Point(12, 156);
-            middleLabel.Name = "middleLabel";
-            middleLabel.Size = new System.Drawing.Size(206, 31);
-            middleLabel.TabIndex = 5;
-            middleLabel.Text = "Средний уровень:";
-            // 
-            // seniorLabel
-            // 
-            seniorLabel.AutoSize = true;
-            seniorLabel.Font = new System.Drawing.Font("Calibri", 12.25532F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            seniorLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            seniorLabel.Location = new System.Drawing.Point(12, 203);
-            seniorLabel.Name = "seniorLabel";
-            seniorLabel.Size = new System.Drawing.Size(208, 31);
-            seniorLabel.TabIndex = 7;
-            seniorLabel.Text = "Высокий уровень:";
-            // 
-            // k_a_pLabel
-            // 
-            k_a_pLabel.AutoSize = true;
-            k_a_pLabel.Font = new System.Drawing.Font("Calibri", 12.25532F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            k_a_pLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            k_a_pLabel.Location = new System.Drawing.Point(12, 256);
-            k_a_pLabel.Name = "k_a_pLabel";
-            k_a_pLabel.Size = new System.Drawing.Size(859, 31);
-            k_a_pLabel.TabIndex = 9;
-            k_a_pLabel.Text = "Коэффициент анализа и проектирования (не позволяет вводить целые числа):";
-            // 
-            // k_y_oLabel
-            // 
-            k_y_oLabel.AutoSize = true;
-            k_y_oLabel.Font = new System.Drawing.Font("Calibri", 12.25532F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            k_y_oLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            k_y_oLabel.Location = new System.Drawing.Point(12, 307);
-            k_y_oLabel.Name = "k_y_oLabel";
-            k_y_oLabel.Size = new System.Drawing.Size(881, 31);
-            k_y_oLabel.TabIndex = 11;
-            k_y_oLabel.Text = "Коэффициент для установки оборудования (не позволяет вводить целые числа):\r\n";
-            // 
-            // k_t_o_sLabel
-            // 
-            k_t_o_sLabel.AutoSize = true;
-            k_t_o_sLabel.Font = new System.Drawing.Font("Calibri", 12.25532F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            k_t_o_sLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            k_t_o_sLabel.Location = new System.Drawing.Point(12, 359);
-            k_t_o_sLabel.Name = "k_t_o_sLabel";
-            k_t_o_sLabel.Size = new System.Drawing.Size(1114, 31);
-            k_t_o_sLabel.TabIndex = 13;
-            k_t_o_sLabel.Text = "Коэффициент для технического обслуживания и сопровождения (не позволяет вводить ц" +
-    "елые числа):";
-            // 
-            // k_vLabel
-            // 
-            k_vLabel.AutoSize = true;
-            k_vLabel.Font = new System.Drawing.Font("Calibri", 12.25532F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            k_vLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            k_vLabel.Location = new System.Drawing.Point(12, 412);
-            k_vLabel.Name = "k_vLabel";
-            k_vLabel.Size = new System.Drawing.Size(267, 31);
-            k_vLabel.TabIndex = 15;
-            k_vLabel.Text = "Коэффициент времени:";
-            // 
-            // k_sLabel
-            // 
-            k_sLabel.AutoSize = true;
-            k_sLabel.Font = new System.Drawing.Font("Calibri", 12.25532F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            k_sLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            k_sLabel.Location = new System.Drawing.Point(12, 467);
-            k_sLabel.Name = "k_sLabel";
-            k_sLabel.Size = new System.Drawing.Size(289, 31);
-            k_sLabel.TabIndex = 17;
-            k_sLabel.Text = "Коэффициент сложности:";
-            // 
-            // k_p_d_eLabel
-            // 
-            k_p_d_eLabel.AutoSize = true;
-            k_p_d_eLabel.Font = new System.Drawing.Font("Calibri", 12.25532F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            k_p_d_eLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            k_p_d_eLabel.Location = new System.Drawing.Point(12, 520);
-            k_p_d_eLabel.Name = "k_p_d_eLabel";
-            k_p_d_eLabel.Size = new System.Drawing.Size(582, 31);
-            k_p_d_eLabel.TabIndex = 19;
-            k_p_d_eLabel.Text = "Коэффициент для перевода в денежный эквивалент:";
             // 
             // zarabotnaya_plataDataSet
             // 
@@ -226,221 +88,58 @@
             // 
             this.coefficientBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
             this.coefficientBindingNavigator.BindingSource = this.coefficientBindingSource;
-            this.coefficientBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.coefficientBindingNavigator.CountItem = null;
             this.coefficientBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.coefficientBindingNavigator.Dock = System.Windows.Forms.DockStyle.None;
+            this.coefficientBindingNavigator.Font = new System.Drawing.Font("Calibri", 13.78723F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.coefficientBindingNavigator.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.coefficientBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.coefficientBindingNavigatorSaveItem});
-            this.coefficientBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.coefficientBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.coefficientBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.coefficientBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.coefficientBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.coefficientBindingNavigator.Location = new System.Drawing.Point(535, 449);
+            this.coefficientBindingNavigator.MoveFirstItem = null;
+            this.coefficientBindingNavigator.MoveLastItem = null;
+            this.coefficientBindingNavigator.MoveNextItem = null;
+            this.coefficientBindingNavigator.MovePreviousItem = null;
             this.coefficientBindingNavigator.Name = "coefficientBindingNavigator";
-            this.coefficientBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.coefficientBindingNavigator.Size = new System.Drawing.Size(1357, 37);
+            this.coefficientBindingNavigator.PositionItem = null;
+            this.coefficientBindingNavigator.Size = new System.Drawing.Size(486, 41);
             this.coefficientBindingNavigator.TabIndex = 0;
             this.coefficientBindingNavigator.Text = "bindingNavigator1";
             this.coefficientBindingNavigator.RefreshItems += new System.EventHandler(this.coefficientBindingNavigator_RefreshItems);
             // 
             // bindingNavigatorAddNewItem
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(128, 37);
             this.bindingNavigatorAddNewItem.Text = "Добавить";
-            this.bindingNavigatorAddNewItem.Visible = false;
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(65, 33);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
             // 
             // bindingNavigatorDeleteItem
             // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(111, 37);
             this.bindingNavigatorDeleteItem.Text = "Удалить";
-            this.bindingNavigatorDeleteItem.Visible = false;
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 33);
-            this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 33);
-            this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 37);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Положение";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9.191489F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 37);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 33);
-            this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 33);
-            this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
-            this.bindingNavigatorMoveLastItem.Click += new System.EventHandler(this.bindingNavigatorMoveLastItem_Click);
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 37);
             // 
             // coefficientBindingNavigatorSaveItem
             // 
-            this.coefficientBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.coefficientBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.coefficientBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("coefficientBindingNavigatorSaveItem.Image")));
             this.coefficientBindingNavigatorSaveItem.Name = "coefficientBindingNavigatorSaveItem";
-            this.coefficientBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 28);
+            this.coefficientBindingNavigatorSaveItem.Size = new System.Drawing.Size(231, 37);
             this.coefficientBindingNavigatorSaveItem.Text = "Сохранить данные";
-            this.coefficientBindingNavigatorSaveItem.Visible = false;
             this.coefficientBindingNavigatorSaveItem.Click += new System.EventHandler(this.coefficientBindingNavigatorSaveItem_Click);
-            // 
-            // buttAdd
-            // 
-            this.buttAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(217)))), ((int)(((byte)(187)))));
-            this.buttAdd.Font = new System.Drawing.Font("Calibri", 12.25532F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.buttAdd.Location = new System.Drawing.Point(407, 584);
-            this.buttAdd.Name = "buttAdd";
-            this.buttAdd.Size = new System.Drawing.Size(178, 62);
-            this.buttAdd.TabIndex = 30;
-            this.buttAdd.Text = "Сохранить";
-            this.buttAdd.UseVisualStyleBackColor = false;
-            this.buttAdd.Click += new System.EventHandler(this.buttAdd_Click);
-            // 
-            // id_coefficienttextBox
-            // 
-            this.id_coefficienttextBox.Location = new System.Drawing.Point(259, 66);
-            this.id_coefficienttextBox.Name = "id_coefficienttextBox";
-            this.id_coefficienttextBox.Size = new System.Drawing.Size(146, 26);
-            this.id_coefficienttextBox.TabIndex = 31;
-            this.id_coefficienttextBox.TextChanged += new System.EventHandler(this.id_coefficienttextBox_TextChanged);
-            // 
-            // juniortextBox
-            // 
-            this.juniortextBox.Location = new System.Drawing.Point(259, 118);
-            this.juniortextBox.Name = "juniortextBox";
-            this.juniortextBox.Size = new System.Drawing.Size(146, 26);
-            this.juniortextBox.TabIndex = 32;
-            // 
-            // middletextBox
-            // 
-            this.middletextBox.Location = new System.Drawing.Point(259, 160);
-            this.middletextBox.Name = "middletextBox";
-            this.middletextBox.Size = new System.Drawing.Size(146, 26);
-            this.middletextBox.TabIndex = 33;
-            // 
-            // seniortextBox
-            // 
-            this.seniortextBox.Location = new System.Drawing.Point(259, 208);
-            this.seniortextBox.Name = "seniortextBox";
-            this.seniortextBox.Size = new System.Drawing.Size(146, 26);
-            this.seniortextBox.TabIndex = 34;
-            // 
-            // k_a_ptextBox
-            // 
-            this.k_a_ptextBox.Location = new System.Drawing.Point(947, 261);
-            this.k_a_ptextBox.Name = "k_a_ptextBox";
-            this.k_a_ptextBox.Size = new System.Drawing.Size(146, 26);
-            this.k_a_ptextBox.TabIndex = 35;
-            // 
-            // k_y_otextBox
-            // 
-            this.k_y_otextBox.Location = new System.Drawing.Point(947, 312);
-            this.k_y_otextBox.Name = "k_y_otextBox";
-            this.k_y_otextBox.Size = new System.Drawing.Size(146, 26);
-            this.k_y_otextBox.TabIndex = 36;
-            // 
-            // k_t_o_stextBox
-            // 
-            this.k_t_o_stextBox.Location = new System.Drawing.Point(1147, 364);
-            this.k_t_o_stextBox.Name = "k_t_o_stextBox";
-            this.k_t_o_stextBox.Size = new System.Drawing.Size(146, 26);
-            this.k_t_o_stextBox.TabIndex = 37;
-            // 
-            // k_vtextBox
-            // 
-            this.k_vtextBox.Location = new System.Drawing.Point(307, 416);
-            this.k_vtextBox.Name = "k_vtextBox";
-            this.k_vtextBox.Size = new System.Drawing.Size(146, 26);
-            this.k_vtextBox.TabIndex = 38;
-            // 
-            // k_stextBox
-            // 
-            this.k_stextBox.Location = new System.Drawing.Point(307, 472);
-            this.k_stextBox.Name = "k_stextBox";
-            this.k_stextBox.Size = new System.Drawing.Size(146, 26);
-            this.k_stextBox.TabIndex = 39;
-            // 
-            // k_p_d_etextBox
-            // 
-            this.k_p_d_etextBox.Location = new System.Drawing.Point(612, 524);
-            this.k_p_d_etextBox.Name = "k_p_d_etextBox";
-            this.k_p_d_etextBox.Size = new System.Drawing.Size(146, 26);
-            this.k_p_d_etextBox.TabIndex = 40;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Zarabotnaya_plata.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(1165, 61);
+            this.pictureBox1.Location = new System.Drawing.Point(1647, 31);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(112, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -452,7 +151,7 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(217)))), ((int)(((byte)(187)))));
             this.button2.Font = new System.Drawing.Font("Calibri", 12.25532F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.button2.Location = new System.Drawing.Point(746, 584);
+            this.button2.Location = new System.Drawing.Point(1225, 491);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(178, 62);
             this.button2.TabIndex = 43;
@@ -460,36 +159,129 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // coefficientDataGridView
+            // 
+            this.coefficientDataGridView.AutoGenerateColumns = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 10.21277F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.coefficientDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.coefficientDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.coefficientDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10});
+            this.coefficientDataGridView.DataSource = this.coefficientBindingSource;
+            this.coefficientDataGridView.Location = new System.Drawing.Point(12, 122);
+            this.coefficientDataGridView.Name = "coefficientDataGridView";
+            this.coefficientDataGridView.RowHeadersWidth = 60;
+            this.coefficientDataGridView.RowTemplate.Height = 28;
+            this.coefficientDataGridView.Size = new System.Drawing.Size(1714, 290);
+            this.coefficientDataGridView.TabIndex = 43;
+            this.coefficientDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.coefficientDataGridView_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_coefficient";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Коэффициент";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 7;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 147;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "junior";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Начальный уровень";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 7;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 147;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "middle";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Средний уровень";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 7;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 147;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "senior";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Высокий уровень";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 7;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 147;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "k_a_p";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Коэффициент анализа и проектирования";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 7;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 147;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "k_y_o";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Коэффициент установки оборудования";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 7;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 147;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "k_t_o_s";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Коэффициент для технического обслуживания и сопровождения";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 7;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 147;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "k_v";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Коэффициент времени";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 7;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 147;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "k_s";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Коэффициент сложности";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 7;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 147;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "k_p_d_e";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Коэффициент для перевода денежных эквивалентов";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 7;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 147;
+            // 
             // FormAddCoefficient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1357, 675);
+            this.ClientSize = new System.Drawing.Size(1838, 574);
+            this.Controls.Add(this.coefficientBindingNavigator);
+            this.Controls.Add(this.coefficientDataGridView);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.k_p_d_etextBox);
-            this.Controls.Add(this.k_stextBox);
-            this.Controls.Add(this.k_vtextBox);
-            this.Controls.Add(this.k_t_o_stextBox);
-            this.Controls.Add(this.k_y_otextBox);
-            this.Controls.Add(this.k_a_ptextBox);
-            this.Controls.Add(this.seniortextBox);
-            this.Controls.Add(this.middletextBox);
-            this.Controls.Add(this.juniortextBox);
-            this.Controls.Add(this.id_coefficienttextBox);
-            this.Controls.Add(this.buttAdd);
-            this.Controls.Add(id_coefficientLabel);
-            this.Controls.Add(juniorLabel);
-            this.Controls.Add(middleLabel);
-            this.Controls.Add(seniorLabel);
-            this.Controls.Add(k_a_pLabel);
-            this.Controls.Add(k_y_oLabel);
-            this.Controls.Add(k_t_o_sLabel);
-            this.Controls.Add(k_vLabel);
-            this.Controls.Add(k_sLabel);
-            this.Controls.Add(k_p_d_eLabel);
-            this.Controls.Add(this.coefficientBindingNavigator);
             this.Name = "FormAddCoefficient";
             this.Text = "Добавление коэффициента";
             this.Load += new System.EventHandler(this.FormAddCoefficient_Load);
@@ -499,6 +291,7 @@
             this.coefficientBindingNavigator.ResumeLayout(false);
             this.coefficientBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coefficientDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -512,29 +305,20 @@
         private Zarabotnaya_plataDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator coefficientBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton coefficientBindingNavigatorSaveItem;
-        private System.Windows.Forms.Button buttAdd;
-        private System.Windows.Forms.TextBox id_coefficienttextBox;
-        private System.Windows.Forms.TextBox juniortextBox;
-        private System.Windows.Forms.TextBox middletextBox;
-        private System.Windows.Forms.TextBox seniortextBox;
-        private System.Windows.Forms.TextBox k_a_ptextBox;
-        private System.Windows.Forms.TextBox k_y_otextBox;
-        private System.Windows.Forms.TextBox k_t_o_stextBox;
-        private System.Windows.Forms.TextBox k_vtextBox;
-        private System.Windows.Forms.TextBox k_stextBox;
-        private System.Windows.Forms.TextBox k_p_d_etextBox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView coefficientDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
     }
 }
