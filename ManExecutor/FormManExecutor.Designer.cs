@@ -50,18 +50,21 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.userBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.full_nameListBox = new System.Windows.Forms.ListBox();
+            this.fillBy1ToolStrip = new System.Windows.Forms.ToolStrip();
+            this.fillBy1ToolStripButton = new System.Windows.Forms.ToolStripButton();
             full_nameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zarabotnaya_plataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingNavigator)).BeginInit();
             this.userBindingNavigator.SuspendLayout();
+            this.fillBy1ToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Zarabotnaya_plata.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(776, 81);
+            this.pictureBox1.Location = new System.Drawing.Point(624, 51);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -175,7 +178,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9.191489F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -221,7 +223,7 @@
             // full_nameLabel
             // 
             full_nameLabel.AutoSize = true;
-            full_nameLabel.Location = new System.Drawing.Point(157, 213);
+            full_nameLabel.Location = new System.Drawing.Point(362, 282);
             full_nameLabel.Name = "full_nameLabel";
             full_nameLabel.Size = new System.Drawing.Size(77, 20);
             full_nameLabel.TabIndex = 5;
@@ -230,12 +232,34 @@
             // full_nameListBox
             // 
             this.full_nameListBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.userBindingSource, "full_name", true));
+            this.full_nameListBox.DataSource = this.userBindingSource;
+            this.full_nameListBox.DisplayMember = "full_name";
             this.full_nameListBox.FormattingEnabled = true;
             this.full_nameListBox.ItemHeight = 20;
-            this.full_nameListBox.Location = new System.Drawing.Point(240, 213);
+            this.full_nameListBox.Location = new System.Drawing.Point(445, 282);
             this.full_nameListBox.Name = "full_nameListBox";
-            this.full_nameListBox.Size = new System.Drawing.Size(142, 84);
+            this.full_nameListBox.Size = new System.Drawing.Size(120, 84);
             this.full_nameListBox.TabIndex = 6;
+            this.full_nameListBox.ValueMember = "full_name";
+            // 
+            // fillBy1ToolStrip
+            // 
+            this.fillBy1ToolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.fillBy1ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fillBy1ToolStripButton});
+            this.fillBy1ToolStrip.Location = new System.Drawing.Point(0, 32);
+            this.fillBy1ToolStrip.Name = "fillBy1ToolStrip";
+            this.fillBy1ToolStrip.Size = new System.Drawing.Size(909, 33);
+            this.fillBy1ToolStrip.TabIndex = 7;
+            this.fillBy1ToolStrip.Text = "fillBy1ToolStrip";
+            // 
+            // fillBy1ToolStripButton
+            // 
+            this.fillBy1ToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.fillBy1ToolStripButton.Name = "fillBy1ToolStripButton";
+            this.fillBy1ToolStripButton.Size = new System.Drawing.Size(66, 21);
+            this.fillBy1ToolStripButton.Text = "FillBy1";
+            this.fillBy1ToolStripButton.Click += new System.EventHandler(this.fillBy1ToolStripButton_Click_1);
             // 
             // FormManExecutor
             // 
@@ -243,6 +267,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(909, 677);
+            this.Controls.Add(this.fillBy1ToolStrip);
             this.Controls.Add(full_nameLabel);
             this.Controls.Add(this.full_nameListBox);
             this.Controls.Add(this.userBindingNavigator);
@@ -256,6 +281,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.userBindingNavigator)).EndInit();
             this.userBindingNavigator.ResumeLayout(false);
             this.userBindingNavigator.PerformLayout();
+            this.fillBy1ToolStrip.ResumeLayout(false);
+            this.fillBy1ToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -282,5 +309,7 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton userBindingNavigatorSaveItem;
         private System.Windows.Forms.ListBox full_nameListBox;
+        private System.Windows.Forms.ToolStrip fillBy1ToolStrip;
+        private System.Windows.Forms.ToolStripButton fillBy1ToolStripButton;
     }
 }

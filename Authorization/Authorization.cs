@@ -18,11 +18,12 @@ namespace Zarabotnaya_plata
         {
             InitializeComponent();
         }
-        int a = 0, b = 15, s = 0, d = 15;
+
         private void buttEnter_Click(object sender, EventArgs e)
         {
             try
             {
+
                 string loginUser = txtboxlog.Text;
                 string passUser = txtboxpas.Text;
                 DB db = new DB();
@@ -64,66 +65,21 @@ namespace Zarabotnaya_plata
                         MessageBox.Show("Неверный логин или пароль");
                         txtboxlog.Clear();
                         txtboxpas.Clear();
-
-                        a++;
-                        if (a == 3)
-                        {
-                            a = 0;
-                            timer1.Enabled = true;
-                            buttEnter.Enabled = false;
-                            label3.Visible = true;
-                            buttExit.Enabled = false;
-                            txtboxlog.Enabled = false;
-                            txtboxpas.Enabled = false;
-                        }
                     }
                 }
-            }
 
+            }
             finally { }
-
-            }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtboxlog_TextChanged(object sender, EventArgs e)
-        {
-          
         }
 
         private void buttExit_Click(object sender, EventArgs e)
-            {
-                this.Close();
-            }
-
-            private void Form1_Load(object sender, EventArgs e)
-            {
-            
+        {
+            this.Close();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            if (b > 0)
-            {
-                b--;
-                label3.Text = ("Вы заблокированы. Пожалуйста подождите: " + b);
-                if (b == 0)
-                {
-                    b = d;
-                    d += 5;
-                    timer1.Enabled = false;
-                    buttEnter.Enabled = true;
-                    label3.Visible = false;
-                    buttExit.Enabled = true;
-                    label3.Text = "";
-                    txtboxlog.Enabled = true;
-                    txtboxpas.Enabled = true;
-                }
-            }
-            s++;
+
         }
     }
 }
