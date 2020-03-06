@@ -61,5 +61,10 @@ namespace Zarabotnaya_plata
             connection.Close();
             MessageBox.Show("Коэффициент успешно удален");
         }
+
+        private void FormCoefficient_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
     }
 }

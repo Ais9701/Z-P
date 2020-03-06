@@ -16,5 +16,10 @@ namespace Zarabotnaya_plata.Authorization
         {
             InitializeComponent();
         }
+
+        private void FormExecutor_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
     }
 }

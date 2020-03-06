@@ -29,24 +29,26 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormManExecutor));
             System.Windows.Forms.Label fio_executorLabel1;
             System.Windows.Forms.Label fio_managerLabel1;
             System.Windows.Forms.Label statusLabel1;
             System.Windows.Forms.Label name_taskLabel1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormManExecutor));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.taskBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.taskBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.zarabotnaya_plataDataSet = new Zarabotnaya_plata.Zarabotnaya_plataDataSet();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.taskBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.button1 = new System.Windows.Forms.Button();
             this.fio_executorTextBox = new System.Windows.Forms.TextBox();
@@ -55,8 +57,6 @@
             this.name_taskTextBox = new System.Windows.Forms.TextBox();
             this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
             this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.taskBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.zarabotnaya_plataDataSet = new Zarabotnaya_plata.Zarabotnaya_plataDataSet();
             this.taskTableAdapter = new Zarabotnaya_plata.Zarabotnaya_plataDataSetTableAdapters.TaskTableAdapter();
             this.tableAdapterManager = new Zarabotnaya_plata.Zarabotnaya_plataDataSetTableAdapters.TableAdapterManager();
             this.managerTableAdapter = new Zarabotnaya_plata.Zarabotnaya_plataDataSetTableAdapters.ManagerTableAdapter();
@@ -70,12 +70,56 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.taskBindingNavigator)).BeginInit();
             this.taskBindingNavigator.SuspendLayout();
-            this.fillByToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zarabotnaya_plataDataSet)).BeginInit();
+            this.fillByToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.managerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // fio_executorLabel1
+            // 
+            fio_executorLabel1.AutoSize = true;
+            fio_executorLabel1.Font = new System.Drawing.Font("Calibri", 13.78723F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            fio_executorLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            fio_executorLabel1.Location = new System.Drawing.Point(71, 153);
+            fio_executorLabel1.Name = "fio_executorLabel1";
+            fio_executorLabel1.Size = new System.Drawing.Size(228, 33);
+            fio_executorLabel1.TabIndex = 13;
+            fio_executorLabel1.Text = "ФИО исполнителя:";
+            // 
+            // fio_managerLabel1
+            // 
+            fio_managerLabel1.AutoSize = true;
+            fio_managerLabel1.Font = new System.Drawing.Font("Calibri", 13.78723F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            fio_managerLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            fio_managerLabel1.Location = new System.Drawing.Point(71, 232);
+            fio_managerLabel1.Name = "fio_managerLabel1";
+            fio_managerLabel1.Size = new System.Drawing.Size(214, 33);
+            fio_managerLabel1.TabIndex = 14;
+            fio_managerLabel1.Text = "ФИО менеджера:";
+            // 
+            // statusLabel1
+            // 
+            statusLabel1.AutoSize = true;
+            statusLabel1.Font = new System.Drawing.Font("Calibri", 13.78723F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            statusLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            statusLabel1.Location = new System.Drawing.Point(71, 381);
+            statusLabel1.Name = "statusLabel1";
+            statusLabel1.Size = new System.Drawing.Size(92, 33);
+            statusLabel1.TabIndex = 15;
+            statusLabel1.Text = "Статус:";
+            // 
+            // name_taskLabel1
+            // 
+            name_taskLabel1.AutoSize = true;
+            name_taskLabel1.Font = new System.Drawing.Font("Calibri", 13.78723F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            name_taskLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            name_taskLabel1.Location = new System.Drawing.Point(71, 310);
+            name_taskLabel1.Name = "name_taskLabel1";
+            name_taskLabel1.Size = new System.Drawing.Size(217, 33);
+            name_taskLabel1.TabIndex = 17;
+            name_taskLabel1.Text = "Название задачи:";
             // 
             // pictureBox1
             // 
@@ -114,9 +158,44 @@
             this.taskBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.taskBindingNavigator.Name = "taskBindingNavigator";
             this.taskBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.taskBindingNavigator.Size = new System.Drawing.Size(1036, 37);
+            this.taskBindingNavigator.Size = new System.Drawing.Size(1036, 32);
             this.taskBindingNavigator.TabIndex = 1;
             this.taskBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // taskBindingSource
+            // 
+            this.taskBindingSource.DataMember = "Task";
+            this.taskBindingSource.DataSource = this.zarabotnaya_plataDataSet;
+            // 
+            // zarabotnaya_plataDataSet
+            // 
+            this.zarabotnaya_plataDataSet.DataSetName = "Zarabotnaya_plataDataSet";
+            this.zarabotnaya_plataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(65, 28);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -151,16 +230,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(65, 28);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 32);
             // 
             // bindingNavigatorMoveNextItem
@@ -183,26 +255,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 32);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 33);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 28);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // taskBindingNavigatorSaveItem
             // 
@@ -225,17 +279,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // fio_executorLabel1
-            // 
-            fio_executorLabel1.AutoSize = true;
-            fio_executorLabel1.Font = new System.Drawing.Font("Calibri", 13.78723F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            fio_executorLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            fio_executorLabel1.Location = new System.Drawing.Point(71, 153);
-            fio_executorLabel1.Name = "fio_executorLabel1";
-            fio_executorLabel1.Size = new System.Drawing.Size(228, 33);
-            fio_executorLabel1.TabIndex = 13;
-            fio_executorLabel1.Text = "ФИО исполнителя:";
-            // 
             // fio_executorTextBox
             // 
             this.fio_executorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.taskBindingSource, "fio_executor", true));
@@ -243,17 +286,6 @@
             this.fio_executorTextBox.Name = "fio_executorTextBox";
             this.fio_executorTextBox.Size = new System.Drawing.Size(199, 26);
             this.fio_executorTextBox.TabIndex = 14;
-            // 
-            // fio_managerLabel1
-            // 
-            fio_managerLabel1.AutoSize = true;
-            fio_managerLabel1.Font = new System.Drawing.Font("Calibri", 13.78723F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            fio_managerLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            fio_managerLabel1.Location = new System.Drawing.Point(71, 232);
-            fio_managerLabel1.Name = "fio_managerLabel1";
-            fio_managerLabel1.Size = new System.Drawing.Size(214, 33);
-            fio_managerLabel1.TabIndex = 14;
-            fio_managerLabel1.Text = "ФИО менеджера:";
             // 
             // fio_managerTextBox
             // 
@@ -263,17 +295,6 @@
             this.fio_managerTextBox.Size = new System.Drawing.Size(199, 26);
             this.fio_managerTextBox.TabIndex = 15;
             // 
-            // statusLabel1
-            // 
-            statusLabel1.AutoSize = true;
-            statusLabel1.Font = new System.Drawing.Font("Calibri", 13.78723F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            statusLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            statusLabel1.Location = new System.Drawing.Point(71, 381);
-            statusLabel1.Name = "statusLabel1";
-            statusLabel1.Size = new System.Drawing.Size(92, 33);
-            statusLabel1.TabIndex = 15;
-            statusLabel1.Text = "Статус:";
-            // 
             // statusTextBox
             // 
             this.statusTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.taskBindingSource, "status", true));
@@ -281,17 +302,6 @@
             this.statusTextBox.Name = "statusTextBox";
             this.statusTextBox.Size = new System.Drawing.Size(199, 26);
             this.statusTextBox.TabIndex = 16;
-            // 
-            // name_taskLabel1
-            // 
-            name_taskLabel1.AutoSize = true;
-            name_taskLabel1.Font = new System.Drawing.Font("Calibri", 13.78723F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            name_taskLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            name_taskLabel1.Location = new System.Drawing.Point(71, 310);
-            name_taskLabel1.Name = "name_taskLabel1";
-            name_taskLabel1.Size = new System.Drawing.Size(217, 33);
-            name_taskLabel1.TabIndex = 17;
-            name_taskLabel1.Text = "Название задачи:";
             // 
             // name_taskTextBox
             // 
@@ -306,9 +316,9 @@
             this.fillByToolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fillByToolStripButton});
-            this.fillByToolStrip.Location = new System.Drawing.Point(0, 37);
+            this.fillByToolStrip.Location = new System.Drawing.Point(0, 32);
             this.fillByToolStrip.Name = "fillByToolStrip";
-            this.fillByToolStrip.Size = new System.Drawing.Size(1036, 37);
+            this.fillByToolStrip.Size = new System.Drawing.Size(1036, 33);
             this.fillByToolStrip.TabIndex = 19;
             this.fillByToolStrip.Text = "fillByToolStrip";
             // 
@@ -319,16 +329,6 @@
             this.fillByToolStripButton.Size = new System.Drawing.Size(56, 29);
             this.fillByToolStripButton.Text = "FillBy";
             this.fillByToolStripButton.Click += new System.EventHandler(this.fillByToolStripButton_Click);
-            // 
-            // taskBindingSource
-            // 
-            this.taskBindingSource.DataMember = "Task";
-            this.taskBindingSource.DataSource = this.zarabotnaya_plataDataSet;
-            // 
-            // zarabotnaya_plataDataSet
-            // 
-            this.zarabotnaya_plataDataSet.DataSetName = "Zarabotnaya_plataDataSet";
-            this.zarabotnaya_plataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // taskTableAdapter
             // 
@@ -382,15 +382,16 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "FormManExecutor";
             this.Text = "Окно исполнителя";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormManExecutor_FormClosed);
             this.Load += new System.EventHandler(this.FormManExecutor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.taskBindingNavigator)).EndInit();
             this.taskBindingNavigator.ResumeLayout(false);
             this.taskBindingNavigator.PerformLayout();
-            this.fillByToolStrip.ResumeLayout(false);
-            this.fillByToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.taskBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zarabotnaya_plataDataSet)).EndInit();
+            this.fillByToolStrip.ResumeLayout(false);
+            this.fillByToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.managerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);

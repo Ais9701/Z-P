@@ -51,5 +51,10 @@ namespace Zarabotnaya_plata
         {
 
         }
+
+        private void FormManager_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
     }
 }

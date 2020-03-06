@@ -18,6 +18,34 @@ namespace Zarabotnaya_plata
         {
             InitializeComponent();
         }
+        int a = 0, b = 15, s = 0, d = 15;
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (b > 0)
+            {
+                b--;
+                label3.Text = ("Вы заблокированы. Пожалуйста подождите: " + b);
+                if (b == 0)
+                {
+                    b = d;
+                    d += 5;
+                    timer1.Enabled = false;
+                    buttEnter.Enabled = true;
+                    label3.Visible = false;
+                    buttExit.Enabled = true;
+                    label3.Text = "";
+                    txtboxlog.Enabled = true;
+                    txtboxpas.Enabled = true;
+                }
+            }
+            s++;
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
 
         private void buttEnter_Click(object sender, EventArgs e)
         {
@@ -65,6 +93,17 @@ namespace Zarabotnaya_plata
                         MessageBox.Show("Неверный логин или пароль");
                         txtboxlog.Clear();
                         txtboxpas.Clear();
+                        a++;
+                        if (a == 3)
+                        {
+                            a = 0;
+                            timer1.Enabled = true;
+                            buttEnter.Enabled = false;
+                            label3.Visible = true;
+                            buttExit.Enabled = false;
+                            txtboxlog.Enabled = false;
+                            txtboxpas.Enabled = false;
+                        }
                     }
                 }
 

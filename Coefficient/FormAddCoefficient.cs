@@ -63,7 +63,41 @@ namespace Zarabotnaya_plata
 
         private void buttSave_Click(object sender, EventArgs e)
         {
+            coefficientTableAdapter.Update(zarabotnaya_plataDataSet);
+            MessageBox.Show("Изменения сохранены в базе данных");
+        }
 
+        private void buttDelete_Click(object sender, EventArgs e)
+        {
+            coefficientDataGridView.Rows.RemoveAt(coefficientDataGridView.CurrentCell.RowIndex);
+            coefficientTableAdapter.Update(zarabotnaya_plataDataSet);
+            MessageBox.Show("Запись удалена из базы данных");
+        }
+
+        private void coefficientDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void coefficientDataGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Удалить запись?", "Удаление", MessageBoxButtons.OKCancel,
+            MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+            if (dr == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+            }
+
+        }
+
+        private void FormAddCoefficient_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
     }
 }

@@ -37,12 +37,9 @@
             this.tableAdapterManager = new Zarabotnaya_plata.Zarabotnaya_plataDataSetTableAdapters.TableAdapterManager();
             this.coefficientBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.coefficientBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.coefficientDataGridView = new System.Windows.Forms.DataGridView();
-            this.buttSave = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +50,9 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttSave = new System.Windows.Forms.Button();
+            this.buttDelete = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.zarabotnaya_plataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coefficientBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coefficientBindingNavigator)).BeginInit();
@@ -90,59 +90,41 @@
             this.coefficientBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
             this.coefficientBindingNavigator.BindingSource = this.coefficientBindingSource;
             this.coefficientBindingNavigator.CountItem = null;
-            this.coefficientBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.coefficientBindingNavigator.DeleteItem = null;
             this.coefficientBindingNavigator.Dock = System.Windows.Forms.DockStyle.None;
             this.coefficientBindingNavigator.Font = new System.Drawing.Font("Calibri", 13.78723F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.coefficientBindingNavigator.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.coefficientBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.coefficientBindingNavigatorSaveItem});
-            this.coefficientBindingNavigator.Location = new System.Drawing.Point(569, 346);
+            this.bindingNavigatorAddNewItem});
+            this.coefficientBindingNavigator.Location = new System.Drawing.Point(342, 900);
             this.coefficientBindingNavigator.MoveFirstItem = null;
             this.coefficientBindingNavigator.MoveLastItem = null;
             this.coefficientBindingNavigator.MoveNextItem = null;
             this.coefficientBindingNavigator.MovePreviousItem = null;
             this.coefficientBindingNavigator.Name = "coefficientBindingNavigator";
             this.coefficientBindingNavigator.PositionItem = null;
-            this.coefficientBindingNavigator.Size = new System.Drawing.Size(486, 41);
+            this.coefficientBindingNavigator.Size = new System.Drawing.Size(144, 41);
             this.coefficientBindingNavigator.TabIndex = 0;
             this.coefficientBindingNavigator.Text = "bindingNavigator1";
             this.coefficientBindingNavigator.RefreshItems += new System.EventHandler(this.coefficientBindingNavigator_RefreshItems);
             // 
             // bindingNavigatorAddNewItem
             // 
+            this.bindingNavigatorAddNewItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(217)))), ((int)(((byte)(187)))));
             this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.ImageTransparentColor = System.Drawing.Color.White;
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(128, 37);
             this.bindingNavigatorAddNewItem.Text = "Добавить";
             // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(111, 37);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
-            // 
-            // coefficientBindingNavigatorSaveItem
-            // 
-            this.coefficientBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.coefficientBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("coefficientBindingNavigatorSaveItem.Image")));
-            this.coefficientBindingNavigatorSaveItem.Name = "coefficientBindingNavigatorSaveItem";
-            this.coefficientBindingNavigatorSaveItem.Size = new System.Drawing.Size(231, 37);
-            this.coefficientBindingNavigatorSaveItem.Text = "Сохранить данные";
-            this.coefficientBindingNavigatorSaveItem.Click += new System.EventHandler(this.coefficientBindingNavigatorSaveItem_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Zarabotnaya_plata.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 310);
+            this.pictureBox1.Location = new System.Drawing.Point(869, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(112, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(297, 90);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 42;
             this.pictureBox1.TabStop = false;
@@ -152,7 +134,7 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(217)))), ((int)(((byte)(187)))));
             this.button2.Font = new System.Drawing.Font("Calibri", 12.25532F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.button2.Location = new System.Drawing.Point(1240, 365);
+            this.button2.Location = new System.Drawing.Point(1705, 917);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(178, 62);
             this.button2.TabIndex = 43;
@@ -184,54 +166,46 @@
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10});
             this.coefficientDataGridView.DataSource = this.coefficientBindingSource;
-            this.coefficientDataGridView.Location = new System.Drawing.Point(2, 0);
+            this.coefficientDataGridView.Location = new System.Drawing.Point(-1, 108);
             this.coefficientDataGridView.Name = "coefficientDataGridView";
             this.coefficientDataGridView.RowHeadersWidth = 60;
             this.coefficientDataGridView.RowTemplate.Height = 28;
-            this.coefficientDataGridView.Size = new System.Drawing.Size(1927, 280);
+            this.coefficientDataGridView.Size = new System.Drawing.Size(2024, 765);
             this.coefficientDataGridView.TabIndex = 43;
-            // 
-            // buttSave
-            // 
-            this.buttSave.Location = new System.Drawing.Point(231, 346);
-            this.buttSave.Name = "buttSave";
-            this.buttSave.Size = new System.Drawing.Size(173, 81);
-            this.buttSave.TabIndex = 44;
-            this.buttSave.Text = "Сохранить";
-            this.buttSave.UseVisualStyleBackColor = true;
-            this.buttSave.Click += new System.EventHandler(this.buttSave_Click);
+            this.coefficientDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.coefficientDataGridView_CellContentClick);
+            this.coefficientDataGridView.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.coefficientDataGridView_UserDeletingRow);
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "id_coefficient";
             this.dataGridViewTextBoxColumn1.HeaderText = "Коэффициент";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 7;
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 4;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 147;
+            this.dataGridViewTextBoxColumn1.Width = 140;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "junior";
             this.dataGridViewTextBoxColumn2.HeaderText = "Начальный уровень";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 7;
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 3;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 147;
+            this.dataGridViewTextBoxColumn2.Width = 140;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "middle";
             this.dataGridViewTextBoxColumn3.HeaderText = "Средний уровень";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 7;
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 3;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 147;
+            this.dataGridViewTextBoxColumn3.Width = 140;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "senior";
             this.dataGridViewTextBoxColumn4.HeaderText = "Высокий уровень";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 7;
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 3;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 147;
+            this.dataGridViewTextBoxColumn4.Width = 140;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -247,7 +221,7 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "Коэффициент для установки оборудования";
             this.dataGridViewTextBoxColumn6.MinimumWidth = 7;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 147;
+            this.dataGridViewTextBoxColumn6.Width = 140;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -263,7 +237,7 @@
             this.dataGridViewTextBoxColumn8.HeaderText = "Коэффициент времени";
             this.dataGridViewTextBoxColumn8.MinimumWidth = 7;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 147;
+            this.dataGridViewTextBoxColumn8.Width = 140;
             // 
             // dataGridViewTextBoxColumn9
             // 
@@ -271,7 +245,7 @@
             this.dataGridViewTextBoxColumn9.HeaderText = "Коэффициент сложности";
             this.dataGridViewTextBoxColumn9.MinimumWidth = 7;
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Width = 147;
+            this.dataGridViewTextBoxColumn9.Width = 140;
             // 
             // dataGridViewTextBoxColumn10
             // 
@@ -279,21 +253,63 @@
             this.dataGridViewTextBoxColumn10.HeaderText = "Коэффициент для перевода в денежный эквивалент";
             this.dataGridViewTextBoxColumn10.MinimumWidth = 7;
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Width = 147;
+            this.dataGridViewTextBoxColumn10.Width = 140;
+            // 
+            // buttSave
+            // 
+            this.buttSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(217)))), ((int)(((byte)(187)))));
+            this.buttSave.Font = new System.Drawing.Font("Calibri", 12.25532F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.buttSave.Location = new System.Drawing.Point(562, 900);
+            this.buttSave.Name = "buttSave";
+            this.buttSave.Size = new System.Drawing.Size(178, 62);
+            this.buttSave.TabIndex = 44;
+            this.buttSave.Text = "Сохранить";
+            this.buttSave.UseVisualStyleBackColor = false;
+            this.buttSave.Click += new System.EventHandler(this.buttSave_Click);
+            // 
+            // buttDelete
+            // 
+            this.buttDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(217)))), ((int)(((byte)(187)))));
+            this.buttDelete.Font = new System.Drawing.Font("Calibri", 12.25532F);
+            this.buttDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.buttDelete.Location = new System.Drawing.Point(768, 900);
+            this.buttDelete.Name = "buttDelete";
+            this.buttDelete.Size = new System.Drawing.Size(178, 62);
+            this.buttDelete.TabIndex = 45;
+            this.buttDelete.Text = "Удалить";
+            this.buttDelete.UseVisualStyleBackColor = false;
+            this.buttDelete.Click += new System.EventHandler(this.buttDelete_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 10.21277F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(744, 965);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(239, 52);
+            this.label1.TabIndex = 46;
+            this.label1.Text = "(можно воспользоваться \r\nклавишей DEL)";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // FormAddCoefficient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1924, 476);
+            this.ClientSize = new System.Drawing.Size(1924, 1051);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.buttDelete);
             this.Controls.Add(this.buttSave);
             this.Controls.Add(this.coefficientDataGridView);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.coefficientBindingNavigator);
             this.Name = "FormAddCoefficient";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Добавление коэффициента";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormAddCoefficient_FormClosed);
             this.Load += new System.EventHandler(this.FormAddCoefficient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.zarabotnaya_plataDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coefficientBindingSource)).EndInit();
@@ -315,12 +331,11 @@
         private Zarabotnaya_plataDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator coefficientBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton coefficientBindingNavigatorSaveItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView coefficientDataGridView;
         private System.Windows.Forms.Button buttSave;
+        private System.Windows.Forms.Button buttDelete;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -331,5 +346,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.Label label1;
     }
 }
