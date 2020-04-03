@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Zarabotnaya_plata.Authorization;
 
 namespace Zarabotnaya_plata
 {
@@ -76,17 +69,17 @@ namespace Zarabotnaya_plata
                     ifrm.Left = this.Left; // задаём открываемой форме позицию слева равную позиции текущей формы
                     ifrm.Top = this.Top; // задаём открываемой форме позицию сверху равную позиции текущей формы
                     ifrm.Show(); // отображаем Form2
-                    this.Hide(); // скрываем Form1 (this - текущая форма)
+                    this.Hide();
                 }
                 else
                 {
                     if (table1.Rows.Count > 0)
                     {
-                        Form ifrm = new FormExecutor();
+                        Form ifrm = new FormExecutor2();
                         ifrm.Left = this.Left; // задаём открываемой форме позицию слева равную позиции текущей формы
                         ifrm.Top = this.Top; // задаём открываемой форме позицию сверху равную позиции текущей формы
                         ifrm.Show(); // отображаем Form2
-                        this.Hide(); // скрываем Form1 (this - текущая форма)
+                        this.Hide();
                     }
                     else
                     {

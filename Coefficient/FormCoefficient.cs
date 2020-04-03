@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Zarabotnaya_plata
 {
-    public partial class FormCoefficient : Form
+    public partial class FormProba : Form
     {
-        public FormCoefficient()
+        public FormProba()
         {
             InitializeComponent();
         }
@@ -53,13 +53,18 @@ namespace Zarabotnaya_plata
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-DPL61M9\SQLEXPRESS;Initial Catalog=Zarabotnaya_plata;Integrated Security=True");
-            connection.Open();
-            String queryDelete = "DELETE FROM Coefficient where id_coefficient ='" + id_coefficientTextBox.Text + "'";
-            SqlDataAdapter SDA = new SqlDataAdapter(queryDelete, connection);
-            SDA.SelectCommand.ExecuteNonQuery();
-            connection.Close();
-            MessageBox.Show("Коэффициент успешно удален");
+            try
+            {
+
+                SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-DPL61M9\SQLEXPRESS;Initial Catalog=Zarabotnaya_plata;Integrated Security=True");
+                connection.Open();
+                String queryDelete = "DELETE FROM Coefficient where id_coefficient ='" + id_coefficientTextBox.Text + "'";
+                SqlDataAdapter SDA = new SqlDataAdapter(queryDelete, connection);
+                SDA.SelectCommand.ExecuteNonQuery();
+                connection.Close();
+                MessageBox.Show("Коэффициент успешно удален");
+            }
+            finally { MessageBox.Show("не робит"); }
         }
 
         private void FormCoefficient_FormClosed(object sender, FormClosedEventArgs e)

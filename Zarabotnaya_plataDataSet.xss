@@ -8,8 +8,8 @@
   <Shapes>
     <Shape ID="DesignTable:Task" ZOrder="7" X="750" Y="70" Height="398" Width="232" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="304" />
     <Shape ID="DesignTable:Coefficient" ZOrder="10" X="411" Y="763" Height="371" Width="288" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="304" />
-    <Shape ID="DesignTable:Executor" ZOrder="9" X="411" Y="70" Height="209" Width="269" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="142" />
-    <Shape ID="DesignTable:Manager" ZOrder="8" X="70" Y="70" Height="182" Width="271" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="115" />
+    <Shape ID="DesignTable:Executor" ZOrder="9" X="411" Y="70" Height="236" Width="269" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="169" />
+    <Shape ID="DesignTable:Manager" ZOrder="8" X="70" Y="70" Height="209" Width="271" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="142" />
     <Shape ID="DesignTable:User" ZOrder="6" X="411" Y="457" Height="317" Width="232" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="169" />
   </Shapes>
   <Connectors>
@@ -33,7 +33,7 @@
         </Point>
         <Point>
           <X>527</X>
-          <Y>279</Y>
+          <Y>306</Y>
         </Point>
       </RoutePoints>
     </Connector>
@@ -49,7 +49,7 @@
         </Point>
         <Point>
           <X>316</X>
-          <Y>252</Y>
+          <Y>279</Y>
         </Point>
       </RoutePoints>
     </Connector>
@@ -65,7 +65,7 @@
         </Point>
         <Point>
           <X>324</X>
-          <Y>252</Y>
+          <Y>279</Y>
         </Point>
       </RoutePoints>
     </Connector>

@@ -20,11 +20,12 @@ namespace Zarabotnaya_plata
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form ifrm = new FormCoefficient();
+            Form ifrm = new FormProba();
             ifrm.Left = this.Left; // задаём открываемой форме позицию слева равную позиции текущей формы
             ifrm.Top = this.Top; // задаём открываемой форме позицию сверху равную позиции текущей формы
             ifrm.Show(); // отображаем Form2
-            this.Hide(); // скрываем Form1 (this - текущая форма)
+            this.Hide();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -36,6 +37,7 @@ namespace Zarabotnaya_plata
             Authorization.Top = this.Top; // задаём открываемой форме позицию сверху равную позиции текущей формы
             Authorization.Show(); // отображаем Form2
             this.Hide();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -44,7 +46,8 @@ namespace Zarabotnaya_plata
             ifrm.Left = this.Left; // задаём открываемой форме позицию слева равную позиции текущей формы
             ifrm.Top = this.Top; // задаём открываемой форме позицию сверху равную позиции текущей формы
             ifrm.Show(); // отображаем Form2
-            this.Hide(); // скрываем Form1 (this - текущая форма)
+            this.Hide();
+
         }
 
         private void FormManager_Load(object sender, EventArgs e)
@@ -56,5 +59,6 @@ namespace Zarabotnaya_plata
         {
             System.Windows.Forms.Application.Exit();
         }
+
+        }
     }
-}

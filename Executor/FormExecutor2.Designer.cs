@@ -1,6 +1,6 @@
-﻿namespace Zarabotnaya_plata.Authorization
+﻿namespace Zarabotnaya_plata
 {
-    partial class FormExecutor
+    partial class FormExecutor2
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // FormExecutor
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "FormExecutor";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormExecutor";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormExecutor_FormClosed);
-            this.ResumeLayout(false);
-
+            this.Text = "FormExecutor2";
         }
 
         #endregion

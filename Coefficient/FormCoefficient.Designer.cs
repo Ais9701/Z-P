@@ -1,6 +1,6 @@
 ﻿namespace Zarabotnaya_plata
 {
-    partial class FormCoefficient
+    partial class FormProba
     {
         /// <summary>
         /// Required designer variable.
@@ -39,7 +39,7 @@
             System.Windows.Forms.Label k_vLabel;
             System.Windows.Forms.Label k_sLabel;
             System.Windows.Forms.Label k_p_d_eLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCoefficient));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProba));
             this.zarabotnaya_plataDataSet = new Zarabotnaya_plata.Zarabotnaya_plataDataSet();
             this.coefficientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.coefficientTableAdapter = new Zarabotnaya_plata.Zarabotnaya_plataDataSetTableAdapters.CoefficientTableAdapter();
@@ -513,7 +513,7 @@
             this.Controls.Add(this.coefficientBindingNavigator);
             this.Name = "FormCoefficient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Коэффициент";
+            this.Text = "Окно коэффициента(ов)";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormCoefficient_FormClosed);
             this.Load += new System.EventHandler(this.FormCoefficient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.zarabotnaya_plataDataSet)).EndInit();

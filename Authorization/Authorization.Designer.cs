@@ -126,11 +126,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 10.21277F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(267, 397);
+            this.label3.Location = new System.Drawing.Point(267, 391);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(339, 52);
+            this.label3.Size = new System.Drawing.Size(345, 52);
             this.label3.TabIndex = 7;
-            this.label3.Text = "При трёх неудачных попыток, \r\nсистема заблокируется на 15 секунд";
+            this.label3.Text = "(после трёх неудачных попыток, \r\nсистема заблокируется на 15 секунд)";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // timer1
@@ -153,6 +153,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 13.78723F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.label5.Location = new System.Drawing.Point(237, 165);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(468, 33);

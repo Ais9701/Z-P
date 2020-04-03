@@ -1243,6 +1243,8 @@ namespace Zarabotnaya_plata {
             
             private global::System.Data.DataColumn columnid_manager;
             
+            private global::System.Data.DataColumn columnfio_executor;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public ExecutorDataTable() {
@@ -1310,6 +1312,14 @@ namespace Zarabotnaya_plata {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn fio_executorColumn {
+                get {
+                    return this.columnfio_executor;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1345,13 +1355,14 @@ namespace Zarabotnaya_plata {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ExecutorRow AddExecutorRow(int id_executor, UserRow parentUserRowByFK_Executor_User, string grade, ManagerRow parentManagerRowByFK_Executor_Manager) {
+            public ExecutorRow AddExecutorRow(int id_executor, UserRow parentUserRowByFK_Executor_User, string grade, ManagerRow parentManagerRowByFK_Executor_Manager, string fio_executor) {
                 ExecutorRow rowExecutorRow = ((ExecutorRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id_executor,
                         null,
                         grade,
-                        null};
+                        null,
+                        fio_executor};
                 if ((parentUserRowByFK_Executor_User != null)) {
                     columnValuesArray[1] = parentUserRowByFK_Executor_User[0];
                 }
@@ -1391,6 +1402,7 @@ namespace Zarabotnaya_plata {
                 this.columnid_user = base.Columns["id_user"];
                 this.columngrade = base.Columns["grade"];
                 this.columnid_manager = base.Columns["id_manager"];
+                this.columnfio_executor = base.Columns["fio_executor"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1404,11 +1416,14 @@ namespace Zarabotnaya_plata {
                 base.Columns.Add(this.columngrade);
                 this.columnid_manager = new global::System.Data.DataColumn("id_manager", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_manager);
+                this.columnfio_executor = new global::System.Data.DataColumn("fio_executor", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfio_executor);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_executor}, true));
                 this.columnid_executor.AllowDBNull = false;
                 this.columnid_executor.Unique = true;
                 this.columngrade.MaxLength = 50;
+                this.columnfio_executor.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1548,6 +1563,8 @@ namespace Zarabotnaya_plata {
             
             private global::System.Data.DataColumn columnid_coefficient;
             
+            private global::System.Data.DataColumn columnfio_manager;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public ManagerDataTable() {
@@ -1607,6 +1624,14 @@ namespace Zarabotnaya_plata {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn fio_managerColumn {
+                get {
+                    return this.columnfio_manager;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1642,12 +1667,13 @@ namespace Zarabotnaya_plata {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ManagerRow AddManagerRow(int id_manager, UserRow parentUserRowByFK_Manager_User, CoefficientRow parentCoefficientRowByFK_Manager_Coefficient) {
+            public ManagerRow AddManagerRow(int id_manager, UserRow parentUserRowByFK_Manager_User, CoefficientRow parentCoefficientRowByFK_Manager_Coefficient, string fio_manager) {
                 ManagerRow rowManagerRow = ((ManagerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id_manager,
                         null,
-                        null};
+                        null,
+                        fio_manager};
                 if ((parentUserRowByFK_Manager_User != null)) {
                     columnValuesArray[1] = parentUserRowByFK_Manager_User[0];
                 }
@@ -1686,6 +1712,7 @@ namespace Zarabotnaya_plata {
                 this.columnid_manager = base.Columns["id_manager"];
                 this.columnid_user = base.Columns["id_user"];
                 this.columnid_coefficient = base.Columns["id_coefficient"];
+                this.columnfio_manager = base.Columns["fio_manager"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1697,10 +1724,13 @@ namespace Zarabotnaya_plata {
                 base.Columns.Add(this.columnid_user);
                 this.columnid_coefficient = new global::System.Data.DataColumn("id_coefficient", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_coefficient);
+                this.columnfio_manager = new global::System.Data.DataColumn("fio_manager", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfio_manager);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_manager}, true));
                 this.columnid_manager.AllowDBNull = false;
                 this.columnid_manager.Unique = true;
+                this.columnfio_manager.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2798,6 +2828,22 @@ namespace Zarabotnaya_plata {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string fio_executor {
+                get {
+                    try {
+                        return ((string)(this[this.tableExecutor.fio_executorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'fio_executor\' в таблице \'Executor\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableExecutor.fio_executorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public ManagerRow ManagerRow {
                 get {
                     return ((ManagerRow)(this.GetParentRow(this.Table.ParentRelations["FK_Executor_Manager"])));
@@ -2852,6 +2898,18 @@ namespace Zarabotnaya_plata {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setid_managerNull() {
                 this[this.tableExecutor.id_managerColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isfio_executorNull() {
+                return this.IsNull(this.tableExecutor.fio_executorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setfio_executorNull() {
+                this[this.tableExecutor.fio_executorColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2925,6 +2983,22 @@ namespace Zarabotnaya_plata {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string fio_manager {
+                get {
+                    try {
+                        return ((string)(this[this.tableManager.fio_managerColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'fio_manager\' в таблице \'Manager\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableManager.fio_managerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public CoefficientRow CoefficientRow {
                 get {
                     return ((CoefficientRow)(this.GetParentRow(this.Table.ParentRelations["FK_Manager_Coefficient"])));
@@ -2967,6 +3041,18 @@ namespace Zarabotnaya_plata {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setid_coefficientNull() {
                 this[this.tableManager.id_coefficientColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isfio_managerNull() {
+                return this.IsNull(this.tableManager.fio_managerColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setfio_managerNull() {
+                this[this.tableManager.fio_managerColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4723,10 +4809,11 @@ SELECT id_coefficient, junior, middle, senior, k_a_p, k_y_o, k_t_o_s, k_v, k_s, 
             tableMapping.ColumnMappings.Add("id_user", "id_user");
             tableMapping.ColumnMappings.Add("grade", "grade");
             tableMapping.ColumnMappings.Add("id_manager", "id_manager");
+            tableMapping.ColumnMappings.Add("fio_executor", "fio_executor");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Executor] WHERE (([id_executor] = @Original_id_executor) AND ((@IsNull_id_user = 1 AND [id_user] IS NULL) OR ([id_user] = @Original_id_user)) AND ((@IsNull_grade = 1 AND [grade] IS NULL) OR ([grade] = @Original_grade)) AND ((@IsNull_id_manager = 1 AND [id_manager] IS NULL) OR ([id_manager] = @Original_id_manager)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Executor] WHERE (([id_executor] = @Original_id_executor) AND ((@IsNull_id_user = 1 AND [id_user] IS NULL) OR ([id_user] = @Original_id_user)) AND ((@IsNull_grade = 1 AND [grade] IS NULL) OR ([grade] = @Original_grade)) AND ((@IsNull_id_manager = 1 AND [id_manager] IS NULL) OR ([id_manager] = @Original_id_manager)) AND ((@IsNull_fio_executor = 1 AND [fio_executor] IS NULL) OR ([fio_executor] = @Original_fio_executor)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_executor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_executor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_user", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_user", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -4735,25 +4822,28 @@ SELECT id_coefficient, junior, middle, senior, k_a_p, k_y_o, k_t_o_s, k_v, k_s, 
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_grade", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "grade", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_manager", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_manager", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_manager", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_manager", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_fio_executor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fio_executor", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fio_executor", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fio_executor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Executor] ([id_executor], [id_user], [grade], [id_manager]) VA" +
-                "LUES (@id_executor, @id_user, @grade, @id_manager);\r\nSELECT id_executor, id_user" +
-                ", grade, id_manager FROM Executor WHERE (id_executor = @id_executor)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Executor] ([id_executor], [id_user], [grade], [id_manager], [fio_executor]) VALUES (@id_executor, @id_user, @grade, @id_manager, @fio_executor);
+SELECT id_executor, id_user, grade, id_manager, fio_executor FROM Executor WHERE (id_executor = @id_executor)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_executor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_executor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_user", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_user", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@grade", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "grade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_manager", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_manager", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fio_executor", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fio_executor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Executor] SET [id_executor] = @id_executor, [id_user] = @id_user, [grade] = @grade, [id_manager] = @id_manager WHERE (([id_executor] = @Original_id_executor) AND ((@IsNull_id_user = 1 AND [id_user] IS NULL) OR ([id_user] = @Original_id_user)) AND ((@IsNull_grade = 1 AND [grade] IS NULL) OR ([grade] = @Original_grade)) AND ((@IsNull_id_manager = 1 AND [id_manager] IS NULL) OR ([id_manager] = @Original_id_manager)));
-SELECT id_executor, id_user, grade, id_manager FROM Executor WHERE (id_executor = @id_executor)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Executor] SET [id_executor] = @id_executor, [id_user] = @id_user, [grade] = @grade, [id_manager] = @id_manager, [fio_executor] = @fio_executor WHERE (([id_executor] = @Original_id_executor) AND ((@IsNull_id_user = 1 AND [id_user] IS NULL) OR ([id_user] = @Original_id_user)) AND ((@IsNull_grade = 1 AND [grade] IS NULL) OR ([grade] = @Original_grade)) AND ((@IsNull_id_manager = 1 AND [id_manager] IS NULL) OR ([id_manager] = @Original_id_manager)) AND ((@IsNull_fio_executor = 1 AND [fio_executor] IS NULL) OR ([fio_executor] = @Original_fio_executor)));
+SELECT id_executor, id_user, grade, id_manager, fio_executor FROM Executor WHERE (id_executor = @id_executor)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_executor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_executor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_user", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_user", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@grade", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "grade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_manager", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_manager", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fio_executor", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fio_executor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_executor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_executor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_user", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_user", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_user", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_user", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -4761,6 +4851,8 @@ SELECT id_executor, id_user, grade, id_manager FROM Executor WHERE (id_executor 
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_grade", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "grade", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_manager", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_manager", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_manager", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_manager", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_fio_executor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fio_executor", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fio_executor", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fio_executor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4776,7 +4868,7 @@ SELECT id_executor, id_user, grade, id_manager FROM Executor WHERE (id_executor 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id_executor, id_user, grade, id_manager FROM dbo.Executor";
+            this._commandCollection[0].CommandText = "SELECT id_executor, id_user, grade, id_manager, fio_executor FROM Executor";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4837,7 +4929,7 @@ SELECT id_executor, id_user, grade, id_manager FROM Executor WHERE (id_executor 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id_executor, global::System.Nullable<int> Original_id_user, string Original_grade, global::System.Nullable<int> Original_id_manager) {
+        public virtual int Delete(int Original_id_executor, global::System.Nullable<int> Original_id_user, string Original_grade, global::System.Nullable<int> Original_id_manager, string Original_fio_executor) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_executor));
             if ((Original_id_user.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -4863,6 +4955,14 @@ SELECT id_executor, id_user, grade, id_manager FROM Executor WHERE (id_executor 
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
+            if ((Original_fio_executor == null)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_fio_executor));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4883,7 +4983,7 @@ SELECT id_executor, id_user, grade, id_manager FROM Executor WHERE (id_executor 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int id_executor, global::System.Nullable<int> id_user, string grade, global::System.Nullable<int> id_manager) {
+        public virtual int Insert(int id_executor, global::System.Nullable<int> id_user, string grade, global::System.Nullable<int> id_manager, string fio_executor) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id_executor));
             if ((id_user.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((int)(id_user.Value));
@@ -4902,6 +5002,12 @@ SELECT id_executor, id_user, grade, id_manager FROM Executor WHERE (id_executor 
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((fio_executor == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(fio_executor));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4923,7 +5029,7 @@ SELECT id_executor, id_user, grade, id_manager FROM Executor WHERE (id_executor 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int id_executor, global::System.Nullable<int> id_user, string grade, global::System.Nullable<int> id_manager, int Original_id_executor, global::System.Nullable<int> Original_id_user, string Original_grade, global::System.Nullable<int> Original_id_manager) {
+        public virtual int Update(int id_executor, global::System.Nullable<int> id_user, string grade, global::System.Nullable<int> id_manager, string fio_executor, int Original_id_executor, global::System.Nullable<int> Original_id_user, string Original_grade, global::System.Nullable<int> Original_id_manager, string Original_fio_executor) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id_executor));
             if ((id_user.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(id_user.Value));
@@ -4943,30 +5049,44 @@ SELECT id_executor, id_user, grade, id_manager FROM Executor WHERE (id_executor 
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_id_executor));
-            if ((Original_id_user.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_id_user.Value));
+            if ((fio_executor == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(fio_executor));
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_id_executor));
+            if ((Original_id_user.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_id_user.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             if ((Original_grade == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_grade));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_grade));
             }
             if ((Original_id_manager.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_id_manager.Value));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_id_manager.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Original_fio_executor == null)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_fio_executor));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4988,8 +5108,8 @@ SELECT id_executor, id_user, grade, id_manager FROM Executor WHERE (id_executor 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> id_user, string grade, global::System.Nullable<int> id_manager, int Original_id_executor, global::System.Nullable<int> Original_id_user, string Original_grade, global::System.Nullable<int> Original_id_manager) {
-            return this.Update(Original_id_executor, id_user, grade, id_manager, Original_id_executor, Original_id_user, Original_grade, Original_id_manager);
+        public virtual int Update(global::System.Nullable<int> id_user, string grade, global::System.Nullable<int> id_manager, string fio_executor, int Original_id_executor, global::System.Nullable<int> Original_id_user, string Original_grade, global::System.Nullable<int> Original_id_manager, string Original_fio_executor) {
+            return this.Update(Original_id_executor, id_user, grade, id_manager, fio_executor, Original_id_executor, Original_id_user, Original_grade, Original_id_manager, Original_fio_executor);
         }
     }
     
@@ -5117,38 +5237,46 @@ SELECT id_executor, id_user, grade, id_manager FROM Executor WHERE (id_executor 
             tableMapping.ColumnMappings.Add("id_manager", "id_manager");
             tableMapping.ColumnMappings.Add("id_user", "id_user");
             tableMapping.ColumnMappings.Add("id_coefficient", "id_coefficient");
+            tableMapping.ColumnMappings.Add("fio_manager", "fio_manager");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Manager] WHERE (([id_manager] = @Original_id_manager) AND ((@IsNull_id_user = 1 AND [id_user] IS NULL) OR ([id_user] = @Original_id_user)) AND ((@IsNull_id_coefficient = 1 AND [id_coefficient] IS NULL) OR ([id_coefficient] = @Original_id_coefficient)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Manager] WHERE (([id_manager] = @Original_id_manager) AND ((@IsNull_id_user = 1 AND [id_user] IS NULL) OR ([id_user] = @Original_id_user)) AND ((@IsNull_id_coefficient = 1 AND [id_coefficient] IS NULL) OR ([id_coefficient] = @Original_id_coefficient)) AND ((@IsNull_fio_manager = 1 AND [fio_manager] IS NULL) OR ([fio_manager] = @Original_fio_manager)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_manager", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_manager", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_user", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_user", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_user", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_user", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_coefficient", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_coefficient", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_coefficient", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_coefficient", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_fio_manager", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fio_manager", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fio_manager", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fio_manager", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Manager] ([id_manager], [id_user], [id_coefficient]) VALUES (@" +
-                "id_manager, @id_user, @id_coefficient);\r\nSELECT id_manager, id_user, id_coeffici" +
-                "ent FROM Manager WHERE (id_manager = @id_manager)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Manager] ([id_manager], [id_user], [id_coefficient], [fio_manager]) " +
+                "VALUES (@id_manager, @id_user, @id_coefficient, @fio_manager);\r\nSELECT id_manage" +
+                "r, id_user, id_coefficient, fio_manager FROM Manager WHERE (id_manager = @id_man" +
+                "ager)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_manager", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_manager", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_user", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_user", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_coefficient", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_coefficient", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fio_manager", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fio_manager", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Manager] SET [id_manager] = @id_manager, [id_user] = @id_user, [id_coefficient] = @id_coefficient WHERE (([id_manager] = @Original_id_manager) AND ((@IsNull_id_user = 1 AND [id_user] IS NULL) OR ([id_user] = @Original_id_user)) AND ((@IsNull_id_coefficient = 1 AND [id_coefficient] IS NULL) OR ([id_coefficient] = @Original_id_coefficient)));
-SELECT id_manager, id_user, id_coefficient FROM Manager WHERE (id_manager = @id_manager)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Manager] SET [id_manager] = @id_manager, [id_user] = @id_user, [id_coefficient] = @id_coefficient, [fio_manager] = @fio_manager WHERE (([id_manager] = @Original_id_manager) AND ((@IsNull_id_user = 1 AND [id_user] IS NULL) OR ([id_user] = @Original_id_user)) AND ((@IsNull_id_coefficient = 1 AND [id_coefficient] IS NULL) OR ([id_coefficient] = @Original_id_coefficient)) AND ((@IsNull_fio_manager = 1 AND [fio_manager] IS NULL) OR ([fio_manager] = @Original_fio_manager)));
+SELECT id_manager, id_user, id_coefficient, fio_manager FROM Manager WHERE (id_manager = @id_manager)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_manager", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_manager", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_user", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_user", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_coefficient", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_coefficient", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fio_manager", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fio_manager", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_manager", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_manager", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_user", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_user", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_user", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_user", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_coefficient", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_coefficient", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_coefficient", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_coefficient", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_fio_manager", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fio_manager", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fio_manager", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fio_manager", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5164,7 +5292,7 @@ SELECT id_manager, id_user, id_coefficient FROM Manager WHERE (id_manager = @id_
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id_manager, id_user, id_coefficient FROM dbo.Manager";
+            this._commandCollection[0].CommandText = "SELECT id_manager, id_user, id_coefficient, fio_manager FROM Manager";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5225,7 +5353,7 @@ SELECT id_manager, id_user, id_coefficient FROM Manager WHERE (id_manager = @id_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id_manager, global::System.Nullable<int> Original_id_user, global::System.Nullable<int> Original_id_coefficient) {
+        public virtual int Delete(int Original_id_manager, global::System.Nullable<int> Original_id_user, global::System.Nullable<int> Original_id_coefficient, string Original_fio_manager) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_manager));
             if ((Original_id_user.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -5242,6 +5370,14 @@ SELECT id_manager, id_user, id_coefficient FROM Manager WHERE (id_manager = @id_
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Original_fio_manager == null)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_fio_manager));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5263,7 +5399,7 @@ SELECT id_manager, id_user, id_coefficient FROM Manager WHERE (id_manager = @id_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int id_manager, global::System.Nullable<int> id_user, global::System.Nullable<int> id_coefficient) {
+        public virtual int Insert(int id_manager, global::System.Nullable<int> id_user, global::System.Nullable<int> id_coefficient, string fio_manager) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id_manager));
             if ((id_user.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((int)(id_user.Value));
@@ -5276,6 +5412,12 @@ SELECT id_manager, id_user, id_coefficient FROM Manager WHERE (id_manager = @id_
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((fio_manager == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(fio_manager));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5297,7 +5439,7 @@ SELECT id_manager, id_user, id_coefficient FROM Manager WHERE (id_manager = @id_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int id_manager, global::System.Nullable<int> id_user, global::System.Nullable<int> id_coefficient, int Original_id_manager, global::System.Nullable<int> Original_id_user, global::System.Nullable<int> Original_id_coefficient) {
+        public virtual int Update(int id_manager, global::System.Nullable<int> id_user, global::System.Nullable<int> id_coefficient, string fio_manager, int Original_id_manager, global::System.Nullable<int> Original_id_user, global::System.Nullable<int> Original_id_coefficient, string Original_fio_manager) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id_manager));
             if ((id_user.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(id_user.Value));
@@ -5311,22 +5453,36 @@ SELECT id_manager, id_user, id_coefficient FROM Manager WHERE (id_manager = @id_
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_id_manager));
-            if ((Original_id_user.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_id_user.Value));
+            if ((fio_manager == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(fio_manager));
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_id_manager));
+            if ((Original_id_user.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_id_user.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             if ((Original_id_coefficient.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_id_coefficient.Value));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_id_coefficient.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Original_fio_manager == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_fio_manager));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5348,8 +5504,8 @@ SELECT id_manager, id_user, id_coefficient FROM Manager WHERE (id_manager = @id_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> id_user, global::System.Nullable<int> id_coefficient, int Original_id_manager, global::System.Nullable<int> Original_id_user, global::System.Nullable<int> Original_id_coefficient) {
-            return this.Update(Original_id_manager, id_user, id_coefficient, Original_id_manager, Original_id_user, Original_id_coefficient);
+        public virtual int Update(global::System.Nullable<int> id_user, global::System.Nullable<int> id_coefficient, string fio_manager, int Original_id_manager, global::System.Nullable<int> Original_id_user, global::System.Nullable<int> Original_id_coefficient, string Original_fio_manager) {
+            return this.Update(Original_id_manager, id_user, id_coefficient, fio_manager, Original_id_manager, Original_id_user, Original_id_coefficient, Original_fio_manager);
         }
     }
     

@@ -73,12 +73,6 @@
     <Compile Include="Authorization\Authorization.Designer.cs">
       <DependentUpon>Authorization.cs</DependentUpon>
     </Compile>
-    <Compile Include="Executor\FormExecutor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Executor\FormExecutor.Designer.cs">
-      <DependentUpon>FormExecutor.cs</DependentUpon>
-    </Compile>
     <Compile Include="ClassDB\DB.cs" />
     <Compile Include="Coefficient\FormAddCoefficient.cs">
       <SubType>Form</SubType>
@@ -91,6 +85,12 @@
     </Compile>
     <Compile Include="Coefficient\FormCoefficient.Designer.cs">
       <DependentUpon>FormCoefficient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Executor\FormExecutor2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Executor\FormExecutor2.Designer.cs">
+      <DependentUpon>FormExecutor2.cs</DependentUpon>
     </Compile>
     <Compile Include="Manager\FormManager.cs">
       <SubType>Form</SubType>
@@ -113,9 +113,6 @@
     </Compile>
     <EmbeddedResource Include="Authorization\Authorization.resx">
       <DependentUpon>Authorization.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Executor\FormExecutor.resx">
-      <DependentUpon>FormExecutor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Coefficient\FormAddCoefficient.resx">
       <DependentUpon>FormAddCoefficient.cs</DependentUpon>

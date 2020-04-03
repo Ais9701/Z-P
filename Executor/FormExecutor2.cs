@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Zarabotnaya_plata.Authorization
+namespace Zarabotnaya_plata
 {
-    public partial class FormExecutor : Form
+    public partial class FormExecutor2 : Form
     {
-        public FormExecutor()
+        public FormExecutor2()
         {
             InitializeComponent();
-        }
-
-        private void FormExecutor_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            System.Windows.Forms.Application.Exit();
         }
     }
 }

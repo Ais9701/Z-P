@@ -27,12 +27,16 @@ namespace Zarabotnaya_plata.Manager
 
         private void FormManExecutor_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "zarabotnaya_plataDataSet.Executor". При необходимости она может быть перемещена или удалена.
+            this.executorTableAdapter1.Fill(this.zarabotnaya_plataDataSet.Executor);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "zarabotnaya_plataDataSet.User". При необходимости она может быть перемещена или удалена.
             this.userTableAdapter.Fill(this.zarabotnaya_plataDataSet.User);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "zarabotnaya_plataDataSet.Manager". При необходимости она может быть перемещена или удалена.
-            this.managerTableAdapter.Fill(this.zarabotnaya_plataDataSet.Manager);
+            this.managerTableAdapter1.Fill(this.zarabotnaya_plataDataSet.Manager);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "zarabotnaya_plataDataSet.Task". При необходимости она может быть перемещена или удалена.
             this.taskTableAdapter.Fill(this.zarabotnaya_plataDataSet.Task);
+            executorTableAdapter1.Fill(this.zarabotnaya_plataDataSet.Executor);
+            managerTableAdapter1.Fill(this.zarabotnaya_plataDataSet.Manager);
 
         }
 

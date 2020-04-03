@@ -35,16 +35,6 @@ namespace Zarabotnaya_plata
 
         }
 
-        private void bindingNavigatorMoveLastItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void id_coefficienttextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             // вызываем главную форму, которая открыла текущую, главная форма всегда = 0 - [0]
@@ -75,11 +65,6 @@ namespace Zarabotnaya_plata
         }
 
         private void coefficientDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
 
         }
